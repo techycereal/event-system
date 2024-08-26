@@ -3,7 +3,7 @@ const { BlobServiceClient } = require('@azure/storage-blob');
 const path = require('path');
 const crypto = require('crypto');
 
-const connectionString = 'DefaultEndpointsProtocol=https;AccountName=eventsystemstorage;AccountKey=/L8kHg212CbCeJ9xywkusmSA+REW4OzWixOEvHnoRhxDldvlbFofqXpA7VkkIdbZfJWuIy0CmyJD+ASt4lxf9g==;EndpointSuffix=core.windows.net'; // Replace with your Azure Storage connection string
+const connectionString = process.env.BLOB_STORAGE_CONNECTION; // Replace with your Azure Storage connection string
 const containerName = 'events'; // Replace with your container name
 
 const blobServiceClient = BlobServiceClient.fromConnectionString(connectionString);

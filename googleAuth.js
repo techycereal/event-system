@@ -7,9 +7,9 @@ const TOKEN_PATH = path.join(__dirname, 'token.json');
 
 // OAuth2 client setup
 const oauth2Client = new google.auth.OAuth2(
-  '652361104599-s1kqi270gbcpbhtqvivko4ikufcmvabp.apps.googleusercontent.com',
-  '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',
-  'http://localhost:3000/api/google/oauth2callback' // Redirect URI
+  process.env.OAUTH_CLIENT_1,
+  process.env.OAUTH_CLIENT_2,
+  `${process.env.BASE_URL}/api/google/oauth2callback`
 );
 
 function getAuthUrl() {
