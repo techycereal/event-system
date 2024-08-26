@@ -2,7 +2,7 @@
 const { BlobServiceClient } = require('@azure/storage-blob');
 const path = require('path');
 const crypto = require('crypto');
-
+require('dotenv').config();
 const connectionString = process.env.BLOB_STORAGE_CONNECTION; // Replace with your Azure Storage connection string
 const containerName = 'events'; // Replace with your container name
 

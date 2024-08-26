@@ -7,7 +7,7 @@ const { uploadFileToBlob } = require('./azureBlobStorage');
 const fs = require('fs');
 const router = express.Router();
 const upload = multer({ dest: 'uploads/' }); // Temporary folder for multer to save files
-
+require('dotenv').config();
 // Route to generate Google Auth URL
 router.get('/google-auth', (req, res) => {
   const authUrl = getAuthUrl();
