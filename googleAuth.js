@@ -9,7 +9,7 @@ const TOKEN_PATH = path.join(__dirname, 'token.json');
 const oauth2Client = new google.auth.OAuth2(
   process.env.OAUTH_CLIENT_1,
   process.env.OAUTH_CLIENT_2,
-  `${process.env.BASE_URL}/api/google/oauth2callback`
+  `https://afternoon-coast-61757-490898156666.herokuapp.com/api/google/oauth2callback`
 );
 
 function getAuthUrl() {

@@ -20,7 +20,7 @@ router.get('/oauth2callback', async (req, res) => {
   try {
     const tokens = await getAccessToken(code);
     // Redirect to the front-end with tokens
-    res.redirect(`${process.env.FRONT_END}/auth-success?token=${tokens.access_token}`);
+    res.redirect(`https://event-front-chi.vercel.app/auth-success?token=${tokens.access_token}`);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
